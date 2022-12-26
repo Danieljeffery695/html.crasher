@@ -3,25 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colored Marked</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>CSS Color Markers</h1>
-<div class="container">
-    <div class="marker one">
-        <div class="cap"></div>
-        <div class="sleeve"></div>
-        <div class="marker two">
-            <div class="cap"></div>
-            <div class="sleeve"></div>
-        </div>
-        <div class="marker three">
-            <div class="cap"></div>
-            <div class="sleeve"></div>
-        </div>
-    </div>
-</div>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+    <form action="https://register-demo.freecodecamp.org" method="post">
+        <fieldset>
+            <label for="First-Name">Enter Your First-Name: <input type="text" id="First-Name" required /></label>
+            <label for="Last Name">Enter Your Last-Name: <input type="text" id="Last-Name" required /></label>
+            <label for="Email">Enter Your Email: <input type="text" id="Email" required /></label>
+            <label for="Password">Create a New Password: <input type="text" id="Password" pattern="[a-z0-5]{8,}" required/></label>
+        </fieldset>
+        <fieldset>
+            <label for="personal-account"><input type="radio" class="inline" name="Account-type" id="personal-account"> Personal Account</label>
+            <label for="business-account"><input type="radio" class="inline" name="Account-type" id="business account"> Business Account</label>
+            <label for="terms-and-condition"><input type="checkbox" class="inline" id="terms and condition"> I Accept the <a href="https://google.org.terms-and-condition">terms-and-condition</a> </label>
+        </fieldset>
+        <fieldset>
+            <label for="profile picture">Upload a profile picture <input type="file" id="profile picture" name="profile picture"> </label>
+            <label for="age">Input Your age (years)  <input type="number" min="16" max="100" id="age" name="age"> </label>
+            <label for="referrer">How did You hear about us?
+                <select id="referrer" name="referrer">
+                    <option value="">(select one)</option>         
+                    <option value="1">freecodecamp News</option>
+                    <option value="2">freecodecamp youtube</option>
+                    <option value="3">freecodecamp forum</option>
+                    <option value="4">Other</option>
+                </select>
+            </label>
+            <label for="bio">Provide your bio here
+                <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on a beach......."></textarea>
+              <input type="Submit" value="Submit" id="Submit"> 
+            </label>
+    </fieldset>
+</form>
 </body>
 </html>
